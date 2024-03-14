@@ -23,7 +23,7 @@ public class Publisher {
             connection.start();
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
-            destination = session.createQueue("mauricioQueue");
+            destination = session.createQueue("myQueue");
             producer = session.createProducer(destination);
             TextMessage message = session.createTextMessage();
             message.setText("Hello MrRobinson Mensaje Recibido desde Publisher buena Crack");
